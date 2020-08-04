@@ -1,0 +1,17 @@
+.searchBar {
+  margin-top: 10;
+  background-color: #f0eeee;
+  height: 50;
+  border-radius: 5;
+  margin: 0 15;
+  flex-direction: row;
+}
+.searchBar {
+  padding: 20px 50px;
+  text-align: center;
+}
+.icon {
+  font-size: 35;
+  align-self: center;
+  margin: 0 15;
+}

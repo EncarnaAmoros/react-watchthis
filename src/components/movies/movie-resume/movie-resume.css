@@ -1,0 +1,54 @@
+.movie-resume {
+  background: #313131;
+  text-align: left;
+  padding: 20px 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+}
+.movie-resume-animated {
+  opacity: 1;
+  transition-duration: 500ms;
+}
+.movie-resume .movie-resume-info {
+  display: flex;
+  color: #b4b4b4;
+}
+.movie-resume .image {
+  height: auto;
+  width: 400px;
+  border-radius: 3px;
+  transition: none;
+}
+.movie-resume .movie-info {
+  font-family: "Roboto", sans-serif;
+  padding: 10px 30px;
+  text-align: left;
+}
+.movie-resume .name {
+  color: white;
+}
+.movie-resume .name {
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.movie-resume .overview {
+  color: #b4b4b4;
+}
+.movie-resume .vote {
+  font-weight: 500;
+  font-size: 15px;
+}
+.movie-resume .icon-close {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  top: 0;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 35px;
+  color: #bbbbbb;
+}
