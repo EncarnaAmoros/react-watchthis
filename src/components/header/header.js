@@ -1,19 +1,15 @@
 import React from "react";
-
 import { Navbar } from "react-bootstrap";
+import GroupWorkIcon from "@material-ui/icons/GroupWork";
+
+import "./header.css";
 
 export default () => {
   return (
     <div>
-      <Navbar bg="light" variant="light">
+      <Navbar bg="" variant="">
         <Navbar.Brand href="#home">
-          <img
-            alt=""
-            src={require("../../assets/logo1.png")}
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
+          <GroupWorkIcon className="icon-brand d-inline-block align-top" />{" "}
           WHATCH THIS!
         </Navbar.Brand>
       </Navbar>

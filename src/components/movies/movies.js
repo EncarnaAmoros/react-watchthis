@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { scroller } from "react-scroll";
 
 import "./movies.css";
-import MovieItem from "./movie/movie-item";
+import MovieItem from "./movie-item/movie-item";
 import MovieResume from "./movie-resume/movie-resume";
 
 export default ({ busquedaActiva, results }) => {
@@ -12,6 +13,7 @@ export default ({ busquedaActiva, results }) => {
     if (movieSelected === null) {
       setIsMovieResumeOpen(true);
       setMovieSelected(results.filter((movie) => movie.id === id)[0]);
+      scroller.scrollTo("movie-resume");
     } else if (movieSelected.id !== id) {
       setMovieSelected(results.filter((movie) => movie.id === id)[0]);
     } else {
@@ -22,9 +24,9 @@ export default ({ busquedaActiva, results }) => {
 
   let title = null;
   if (busquedaActiva) {
-    title = <p className="title">RESULTADOS DE LA BÚSQUEDA</p>;
+    title = <p className="title">SEARCH RESULTS</p>;
   } else {
-    title = <p className="title">POPULARES</p>;
+    title = <p className="title">POPULAR</p>;
   }
 
   const movieList = results.map((item) => {

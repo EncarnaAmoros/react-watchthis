@@ -22,7 +22,8 @@ export const getPopularMovies = () => {
       const data = await response.json();
 
       if (response.ok) {
-        return data.results;
+        return Promise.reject(data);
+        // return data.results;
       } else {
         return Promise.reject(data);
       }

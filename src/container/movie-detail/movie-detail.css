@@ -1,0 +1,20 @@
+.movie-detail {
+  padding: 20px 50px;
+  text-align: left;
+}
+.movie-detail h1 {
+  text-transform: uppercase;
+}
+.movie-detail .movie-info {
+  padding: 30px 10px;
+  display: flex;
+}
+.movie-detail .image {
+  height: auto;
+  width: 400px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.movie-text-info {
+  padding: 0px 20px;
+}

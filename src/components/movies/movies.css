@@ -15,4 +15,5 @@
 
 .underlined {
   margin-top: -5px;
+  border-top: 1px solid #e5e03a;
 }

@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 
 import "./search.css";
-import SearchBar from "./search-bar/search-bar";
+import SearchBar from "../../components/search-bar/search-bar";
 import { useGetMovies } from "./search.hook";
-import Movies from "../movies/movies";
-import Spinner from "../Spinner/spinner";
+import Movies from "../../components/movies/movies";
+import Spinner from "../../components/spinner/spinner";
 import AuxComponent from "../../hoc/aux-component";
-import Modal from "../modal/modal";
+import Modal from "../../components/modal/modal";
 
 export const Search = (props) => {
   const [term, setTerm] = useState("");
-  const [getSearchMovies, results, activeSearch, loading, error] = useGetMovies(
-    term
-  );
+  const [getSearchMovies, results, activeSearch, loading] = useGetMovies(term);
 
   let resultView = null;
   if (loading === true) {
@@ -22,13 +20,10 @@ export const Search = (props) => {
       <AuxComponent>
         <p className="resultsCount">{results.length} results</p>
         <Movies busquedaActiva={activeSearch} results={results} />
-        <Modal title="Error" message={error} />
+        <Modal />
       </AuxComponent>
     );
   }
-
-  //console.log("Vemos que valor tendría");
-  //console.log(showModal);
 
   return (
     <div className="searchScreen">

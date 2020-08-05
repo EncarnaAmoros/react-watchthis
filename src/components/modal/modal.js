@@ -2,20 +2,19 @@ import React, { useContext } from "react";
 
 import "./modal.css";
 import { Modal, Button } from "react-bootstrap";
-import ModalContext from "../../context/ModalContext";
+import { ModalContext } from "../../context/ModalContext";
 
-export default ({ title, message }) => {
+export default () => {
   const modalContext = useContext(ModalContext);
 
-  console.log("Vemos modal: " + modalContext.modalIsOpen);
   return (
-    <Modal show={modalContext.modalIsOpen} backdrop="static" keyboard={false}>
+    <Modal show={modalContext.isModalOpen} backdrop="static" keyboard={false}>
       <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
+        <Modal.Title>Error</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <p>{message}</p>
+        <p>{modalContext.error}</p>
       </Modal.Body>
 
       <Modal.Footer>
